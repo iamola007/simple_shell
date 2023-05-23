@@ -1,12 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
 #include "main.h"
+
 /**
 * main - simple shell to run  commands with full path
 * Return: Always 0
 */
+
 int main(void)
 {
 	char  *command = NULL;
@@ -16,7 +14,8 @@ int main(void)
 
 	if (isatty(0))
 		printf("#csifun$ ");
-	while ((read = getline(&command, &len, stdin)) != -1)
+
+	while ((read = my_getline(&command, &len, stdin)) != -1)
 	{
 		if (read != -1)
 		{
@@ -32,6 +31,7 @@ int main(void)
 
 		if (flag != 100)
 			child_process(command);
+
 		flag = 0;
 		printf("#cisfun$ ");
 	}
