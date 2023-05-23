@@ -15,7 +15,7 @@ int main(void)
 	int flag;
 
 	if (isatty(0))
-		printf("#csifun ");
+		printf("#csifun$ ");
 	while ((read = getline(&command, &len, stdin)) != -1)
 	{
 		if (read != -1)
