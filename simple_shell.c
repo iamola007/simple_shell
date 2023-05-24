@@ -13,7 +13,7 @@ int main(void)
 	int flag;
 
 	if (isatty(0))
-		printf("#csifun$ ");
+		printf("$ ");
 
 	while ((read = my_getline(&command, &len, stdin)) != -1)
 	{
@@ -33,7 +33,7 @@ int main(void)
 			child_process(command);
 
 		flag = 0;
-		printf("#cisfun$ ");
+		printf("$ ");
 	}
 	free(command);
 	return (0);
